@@ -2,12 +2,19 @@ package com.example.mypet;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class InitActivity extends AppCompatActivity {
+public class InitActivity extends AppCompatActivity implements View.OnClickListener{
+
+ ImageView boton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +46,32 @@ public class InitActivity extends AppCompatActivity {
         PetAdapter petAdapter = new PetAdapter(this, 0, listaAnimales);
         lista.setAdapter(petAdapter);
 
+        AdapterView.OnItemClickListener onItemClickListener = new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int i, long id) {
+                Intent intent = new Intent(view.getContext(), Actualizar.class);
+                startActivity(intent);
+            }
+        };
+
+        lista.setOnItemClickListener(onItemClickListener);
+
+
+
+        //funcionalidad boton de la huella
+        boton =  findViewById(R.id.huellaBoton);
+        boton.setOnClickListener(this);
+
+        boton.setOnClickListener(view -> {
+            Intent  i = new Intent(view.getContext(), Consulta.class);
+            startActivity(i);
+
+        });
+    }
+
+
+    @Override
+    public void onClick(View v) {
 
     }
 }

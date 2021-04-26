@@ -10,7 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyPet">
         <activity android:name=".InitActivity"></activity>
-        <activity android:name=".MainActivity"
+        <activity
+            android:name=".MainActivity"
             android:theme="@android:style/Theme.DeviceDefault.NoActionBar.Fullscreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,7 +19,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+        <activity
+            android:name=".Actualizar"
+            android:label="Actualizar"
+            android:parentActivityName=".InitActivity"/>
+        <activity
+            android:name=".Consulta"
+            android:label="Consulta"
+            android:parentActivityName=".InitActivity"/>
     </application>
 
 </manifest>

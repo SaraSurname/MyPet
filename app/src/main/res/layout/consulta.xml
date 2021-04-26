@@ -1,73 +1,120 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/consultaContainer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal">
+    >
 
-
-    <RelativeLayout
-        android:id="@+id/textsContainer"
+    <LinearLayout
+        android:id="@+id/linearContainer"
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:padding="25dp"
-        android:layout_weight="0.1">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
 
-        <TextView
-            android:id="@+id/textGeneral"
+
+        <RelativeLayout
+            android:id="@+id/textsContainer"
+            android:layout_width="333dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp"
+            android:layout_weight="0.5"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/textGeneral"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="General"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textGenero"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textGeneral"
+                android:layout_marginTop="80dp"
+                android:text="Género"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textConstitucion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textGenero"
+                android:layout_marginTop="30dp"
+                android:text="Constitución"
+                android:textSize="20sp" />
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/editsContainer"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="General"
-            android:textSize="20sp" />
-        <TextView
-            android:id="@+id/textGenero"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Género"
-            android:textSize="20sp"
-            android:layout_marginTop="80dp"
-            android:layout_below="@id/textGeneral"/>
-        <TextView
-            android:id="@+id/textConstitucion"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Constitución"
-            android:textSize="20sp"
-            android:layout_marginTop="30dp"
-            android:layout_below="@id/textGenero"/>
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp"
+            android:layout_weight="0.5"
+            android:padding="10dp">
+
+            <EditText
+                android:id="@+id/editNombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nombre"
+                android:inputType="textPersonName"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/editRaza"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/editNombre"
+                android:hint="Raza"
+                android:inputType="textPersonName"
+                android:textSize="20sp" />
+
+            <Spinner
+                android:id="@+id/spinnerGenero"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/editRaza"
+                android:layout_marginTop="20dp" />
+
+            <EditText
+                android:id="@+id/editPeso"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/spinnerGenero"
+                android:layout_marginTop="20dp"
+                android:hint="Peso "
+                android:inputType="numberDecimal"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/kg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/spinnerGenero"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="35dp"
+                android:layout_toRightOf="@id/editPeso"
+                android:text="kg"
+                android:textSize="20sp" />
 
 
-    </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
 
-    <RelativeLayout
-        android:id="@+id/editsContainer"
+    <Button
+        android:id="@+id/botonGuardar"
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_weight="0.9"
-        android:padding="10dp">
+        android:layout_height="wrap_content"
+        android:text="GUARDAR"
+        android:textSize="20sp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="100dp"/>
 
-        <EditText
-            android:id="@+id/editNombre"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Nombre"
-            android:textSize="20sp"/>
-
-        <EditText
-            android:id="@+id/editRaza"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/editNombre"
-            android:hint="Raza"
-            android:textSize="20sp"/>
-        <Spinner
-            android:id="@+id/spinnerGenero"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/editRaza"
-            />
-
-
-    </RelativeLayout>
-
-</LinearLayout>
+</RelativeLayout>

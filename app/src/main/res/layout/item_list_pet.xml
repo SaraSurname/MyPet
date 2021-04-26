@@ -7,7 +7,7 @@
 
     <RelativeLayout
         android:id="@+id/textsContainer"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
 
@@ -15,6 +15,7 @@
             android:id="@+id/textNombre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="8dp"
             android:text="Nombre"
@@ -26,25 +27,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textNombre"
+            android:layout_marginStart="20dp"
             android:layout_marginLeft="20dp"
             android:text="Raza"
             android:textSize="18sp" />
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/buttonContainer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-        <ImageView
-            android:id="@+id/huellaBoton"
-            android:layout_width="200px"
-            android:layout_height="200px"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:layout_gravity="end"
-            android:layout_margin="20dp"
-            android:src="@drawable/botonhuella" />
     </RelativeLayout>
 
 </LinearLayout>

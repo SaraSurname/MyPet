@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyPet">
-        <activity android:name=".InitActivity"></activity>
+        <activity android:name=".Home"></activity>
         <activity
             android:name=".MainActivity"
             android:theme="@android:style/Theme.DeviceDefault.NoActionBar.Fullscreen">
@@ -22,11 +22,11 @@
         <activity
             android:name=".Actualizar"
             android:label="Actualizar"
-            android:parentActivityName=".InitActivity"/>
+            android:parentActivityName=".Home"/>
         <activity
             android:name=".Consulta"
             android:label="Consulta"
-            android:parentActivityName=".InitActivity"/>
+            android:parentActivityName=".Home"/>
     </application>
 
 </manifest>

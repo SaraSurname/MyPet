@@ -1,12 +1,8 @@
 package com.example.mypet;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.Activity;
 import android.content.Intent;
-import android.media.Image;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.ImageView;
 
 import java.util.Timer;
@@ -25,13 +21,13 @@ public class MainActivity extends Activity  {
         TimerTask tarea = new TimerTask() {
             @Override
             public void run() {
-            Intent i = new Intent(MainActivity.this, InitActivity.class) ;
+            Intent i = new Intent(MainActivity.this, Home.class) ;
             startActivity(i);
             finish();
             }
         };
         Timer tiempo = new Timer();
-        tiempo.schedule(tarea, 3000);
+        tiempo.schedule(tarea, 2000);
 
     }
 

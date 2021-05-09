@@ -25,6 +25,7 @@
                 android:id="@+id/textGeneral"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
                 android:text="General"
                 android:textSize="20sp" />
 
@@ -33,6 +34,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/textGeneral"
+                android:textColor="@color/black"
                 android:layout_marginTop="80dp"
                 android:text="Género"
                 android:textSize="20sp" />
@@ -42,6 +44,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/textGenero"
+                android:textColor="@color/black"
                 android:layout_marginTop="30dp"
                 android:text="Constitución"
                 android:textSize="20sp" />
@@ -79,6 +82,7 @@
                 android:id="@+id/spinnerGenero"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:entries="@array/generos"
                 android:layout_below="@id/editRaza"
                 android:layout_marginTop="20dp" />
 
@@ -115,6 +119,8 @@
         android:textSize="20sp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="100dp"/>
+        android:layout_marginBottom="100dp"
+        android:onClick="onClickCrear"
+        />
 
 </RelativeLayout>
